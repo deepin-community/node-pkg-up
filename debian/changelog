@@ -1,0 +1,12 @@
+node-pkg-up (1.0.0-1.1) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Tue, 29 Dec 2020 03:08:59 +0100
+
+node-pkg-up (1.0.0-1) unstable; urgency=low
+
+  * Initial release (Closes: #847363)
+
+ -- Sruthi Chandran <srud@disroot.org>  Wed, 07 Dec 2016 20:04:45 +0530

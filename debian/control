@@ -1,0 +1,23 @@
+Source: node-pkg-up
+Section: web
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Sruthi Chandran <srud@disroot.org>
+Build-Depends:
+ debhelper (>= 9)
+ , dh-buildinfo
+ , nodejs
+Standards-Version: 3.9.8
+Homepage: https://github.com/sindresorhus/pkg-up#readme
+Vcs-Git: https://anonscm.debian.org/git/pkg-javascript/node-pkg-up.git
+Vcs-Browser: https://anonscm.debian.org/cgit/pkg-javascript/node-pkg-up.git
+
+Package: node-pkg-up
+Architecture: all
+Depends:
+ ${misc:Depends}
+ , nodejs
+ , node-find-up (>= 1.0.0)
+Description: Find the closest package.json file
+ .
+ Node.js is an event-based server-side JavaScript engine.
