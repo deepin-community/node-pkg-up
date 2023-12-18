@@ -1,4 +1,4 @@
-Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: pkg-up
 Upstream-Contact: https://github.com/sindresorhus/pkg-up/issues
 Source: https://github.com/sindresorhus/pkg-up#readme
@@ -31,4 +31,3 @@ License: Expat
  ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
  CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  SOFTWARE.
-
