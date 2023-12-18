@@ -1,14 +1,12 @@
-# pkg-up [![Build Status](https://travis-ci.org/sindresorhus/pkg-up.svg?branch=master)](https://travis-ci.org/sindresorhus/pkg-up)
+# pkg-up
 
 > Find the closest package.json file
 
-
 ## Install
 
+```sh
+npm install pkg-up
 ```
-$ npm install --save pkg-up
-```
-
 
 ## Usage
 
@@ -25,40 +23,35 @@ $ npm install --save pkg-up
 
 ```js
 // example.js
-var pkgUp = require('pkg-up');
+import {pkgUp} from 'pkg-up';
 
-pkgUp().then(function (filepath) {
-	console.log(filepath);
-	//=> '/Users/sindresorhus/foo/package.json'
-});
+console.log(await pkgUp());
+//=> '/Users/sindresorhus/foo/package.json'
 ```
-
 
 ## API
 
-### pkgUp([cwd])
+### pkgUp(options?)
 
-Returns a promise that resolves to a filepath or `null`.
+Returns a `Promise<string>` for the file path, or `Promise<undefined>` if it could not be found.
 
-### pkgUp.sync([cwd])
+### pkgUpSync(options?)
 
-Returns a filepath or `null`.
+Returns the file path, or `undefined` if it could not be found.
+
+#### options
+
+Type: `object`
 
 #### cwd
 
-Type: `string`  
-Default: `'.'`
+Type: `string`\
+Default: `process.cwd()`
 
-Directory to start from.
-
+The directory to start from.
 
 ## Related
 
 - [read-pkg-up](https://github.com/sindresorhus/read-pkg-up) - Read the closest package.json file
-- [pkg-dir](https://github.com/sindresorhus/pkg-dir) - Find the root directory of a npm package
+- [pkg-dir](https://github.com/sindresorhus/pkg-dir) - Find the root directory of an npm package
 - [find-up](https://github.com/sindresorhus/find-up) - Find a file by walking up parent directories
-
-
-## License
-
-MIT © [Sindre Sorhus](http://sindresorhus.com)

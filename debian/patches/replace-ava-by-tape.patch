@@ -1,0 +1,26 @@
+Description: replace ava by tape
+Author: Yadd <yadd@debian.org>
+Forwarded: not-needed
+Last-Update: 2023-04-12
+
+--- a/test.js
++++ b/test.js
+@@ -1,5 +1,5 @@
+ import path from 'node:path';
+-import test from 'ava';
++import test from 'tape';
+ import {fileURLToPath} from 'node:url';
+ import {pkgUp, pkgUpSync} from './index.js';
+ 
+@@ -11,9 +11,11 @@
+ test('async', async t => {
+ 	t.is(await pkgUp({cwd}), pkgPath);
+ 	t.is(path.dirname(await pkgUp()), __dirname);
++	t.end();
+ });
+ 
+ test('sync', t => {
+ 	t.is(pkgUpSync({cwd}), pkgPath);
+ 	t.is(path.dirname(pkgUpSync()), __dirname);
++	t.end();
+ });
